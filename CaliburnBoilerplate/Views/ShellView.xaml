@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Name="HelloWorld" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding HelloWorld, Mode=OneWay}" />
+        <TextBox Grid.Row="1" Name="HelloWorld" />
     </Grid>
 </Window>

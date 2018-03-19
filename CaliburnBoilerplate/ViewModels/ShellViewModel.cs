@@ -9,6 +9,21 @@ namespace CaliburnBoilerplate.ViewModels
 {
     class ShellViewModel : Screen
     {
-        public string HelloWorld { get; set; } = "Hello World!";
+        private string helloWorld;
+
+        public string HelloWorld
+        {
+            get { return helloWorld; }
+            set
+            {
+                helloWorld = value;
+                NotifyOfPropertyChange(() => HelloWorld);
+            }
+        }
+
+        public ShellViewModel()
+        {
+            HelloWorld = "Hello World!";
+        }
     }
 }
