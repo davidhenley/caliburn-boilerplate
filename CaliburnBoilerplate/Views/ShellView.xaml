@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CaliburnBoilerplate.Views"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
-    <Grid>
+        Title="ShellView" Height="300" Width="300">
+    <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding HelloWorld, Mode=OneWay}" />
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding HelloWorld}" />
         <TextBox Grid.Row="1" Name="HelloWorld" />
     </Grid>
 </Window>
